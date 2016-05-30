@@ -1,0 +1,73 @@
+/* Section title - top right corner */
+
+
+* {
+	box-sizing: border-box;
+	font-family: "Comic Sans MS";
+}
+p {
+	position: relative;
+	top: 10px;
+	padding: 10px;
+}
+.header {
+	text-align: center;
+	font-size: 1.75em;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+.row {
+	width: 100%;
+}
+.col {
+	padding: 10px;
+	position: relative;
+	float: left;
+}
+.content {
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	border: 1px solid black;
+}
+.colHeader {
+	position: relative;
+	float: right;
+	top: 0px;
+	right: 0px;
+	font-size: 1.25em;
+	width: 100px;
+	text-align: center;
+	border: 1px solid black;
+}
+#s1 {
+	background-color: pink;
+}
+#s2 {
+	background-color: #FF5555;
+}
+#s3 {
+	background-color: #FFFF66;
+}
+
+/* desktop - 3 equal sections, % */
+@media (min-width: 992px) {
+	.col {
+		width: 33.3%;
+	}
+}
+/* tablet - first 2 half, 3rd entire row */
+@media (min-width: 768px) and (max-width: 991px) {
+	.col {
+		width: 50%;
+	}
+	.col:nth-child(3) {
+		width: 100%;
+	}
+}
+/* mobile - all 3 stacked */
+@media (max-width: 767px) {
+	.col{
+		width: 100%;;
+	}
+}
