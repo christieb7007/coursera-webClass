@@ -166,10 +166,14 @@ function buildAndShowCategoriesHTML (categories) {
     categoriesTitleHtml,
     function (categoriesTitleHtml) {
       // Retrieve single category snippet
+      console.log("got cat title html");
+
       $ajaxUtils.sendGetRequest(
         categoryHtml,
         function (categoryHtml) {
           // Switch CSS class active to menu button
+          console.log("got cat html");
+
           switchMenuToActive();
 
           var categoriesViewHtml = 
@@ -177,6 +181,7 @@ function buildAndShowCategoriesHTML (categories) {
                                     categoriesTitleHtml,
                                     categoryHtml);
           ("#main-content", categoriesViewHtml);
+          insertHtml("#main-content", categoriesViewHtml);
         },
         false);
     },
